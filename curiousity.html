@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Curiousity</title>
+  <link rel="stylesheet" href="curiousity.css">
+</head>
+
+<body>
+
+<div class="ai-box">
+
+  <!-- BACK BUTTON -->
+  <button class="curious-back-btn" onclick="smartBack()">
+    ⟵ SARI GURU
+  </button>
+
+  <div class="curious-content">
+
+    <img src="item.png" alt="Item" class="curious-img">
+
+    <div class="curious-text">
+      <span>ohh really ??</span>
+      <span>Curious to visit this site</span>
+      <span>then go back and tap first option</span>
+      <span>enter given password by Admin</span>
+    </div>
+
+  </div>
+
+</div>
+<script>
+  function smartBack() {
+    if (document.referrer && document.referrer !== "") {
+      window.location.href = document.referrer;
+    } else if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = "index.html";
+    }
+  }
+  </script>
+    
+
+</body>
+</html>
